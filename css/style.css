@@ -2059,6 +2059,7 @@ select:focus-visible {
   .stat-row {
     grid-template-columns: 1fr;
   }
+}
 /* Container holds logo + text in a single inline row */
 .logo-container {
   display: flex !important;
@@ -2116,8 +2117,8 @@ select:focus-visible {
   gap: 0.4rem;
   margin-top: 1.5rem;
   padding: 1.5rem;
-  border-left: 3px solid var(–color-gold);
-  background: var(–color-cream);
+  border-left: 3px solid var(--color-gold);
+  background: var(--color-cream);
   }
 .brand-name {
   font-family: serif;
@@ -2138,7 +2139,7 @@ select:focus-visible {
     width: 42px;
     height: 42px;
   }
-}
+
 .map-container {
   width: 100%;
   overflow: hidden;
@@ -2180,7 +2181,7 @@ select:focus-visible {
   }
   
   .faq-item {
-  background: var(–color-cream);
+  background: var(--color-cream);
   border: 1px solid rgba(27, 58, 47, 0.12);
   margin-bottom: 1rem;
   border-radius: 4px;
@@ -2191,7 +2192,7 @@ select:focus-visible {
   cursor: pointer;
   list-style: none;
   padding: 1.25rem 1.5rem;
-  font-family: var(–font-body);
+  font-family: var(--font-body);
   font-weight: 700;
   font-size: 1.05rem;
   position: relative;
@@ -2203,18 +2204,18 @@ select:focus-visible {
   }
   
   .faq-item summary::after {
-  content: “+”;
+  content: "+";
   position: absolute;
   right: 1.5rem;
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.4rem;
   font-weight: 400;
-  color: var(–color-gold);
+  color: var(--color-gold);
   }
   
   .faq-item[open] summary::after {
-  content: “−”;
+  content: "-";
   }
   
   .faq-answer {
@@ -2227,12 +2228,12 @@ select:focus-visible {
   }
   
   .faq-answer a {
-  color: var(–color-forest);
+  color: var(--color-forest);
   font-weight: 700;
   text-decoration: underline;
   }
   
   .faq-item summary:focus-visible {
-  outline: 2px solid var(–color-gold);
+  outline: 2px solid var(--color-gold);
   outline-offset: -2px;
   }
