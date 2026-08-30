@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Now | Bold Dream Hotel, Ota, Ogun State</title>
+<meta name="description" content="Submit a booking request for Bold Dream Hotel in Ota, Ogun State. Our team will confirm your reservation details with you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="imagees/png" href="images/favicon.png.jpeg">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <!-- FIXED LOGO SECTION -->
+    <div class="logo-container" style="display: flex !important; align-items: center !important; gap: 12px !important;">
+      <img src="images/logo.png" alt="Bold Dream Hotel Logo" class="header-logo" style="width: 45px !important; height: 45px !important; max-width: 45px !important; max-height: 45px !important; object-fit: contain !important; display: block !important;">
+      <div class="logo-text" style="display: flex !important; flex-direction: column !important; justify-content: center !important;">
+        <span class="brand-name" style="font-family: 'Fraunces', serif !important; font-size: 1.1rem !important; font-weight: 700 !important; line-height: 1.1 !important; color: #1a1a1a !important;">BOLD DREAM HOTEL</span>
+        <span class="brand-subtext" style="font-size: 0.62rem !important; letter-spacing: 1.5px !important; color: #666666 !important; margin-top: 3px !important; text-transform: uppercase !important;">3 IMASAYI STREET · OTA</span>
+      </div>
+    </div>
+
+    <button class="nav-toggle"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="main-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Primary">
+
+      <ul class="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="rooms.html">Rooms &amp; Suites</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="booking.html" class="btn btn-primary">Book Now</a>
+      </div>
+
+    </nav>
+  </div>
+
+  <div class="nav-scrim"></div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="hero-media">
+      <img src="images/room-suite-2.jpg" alt="Suite at Bold Dream Hotel">
+    </div>
+    <div class="container hero-content">
+      <span class="breadcrumb"><a href="index.html">Home</a> / Book Now</span>
+      <h1>Book Your Stay</h1>
+      <p>Submit a booking request below and our team will get back to you to confirm availability and details.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="notice-banner">
+        <strong>Please note:</strong> This is a booking request form only. Submitting it does not confirm a reservation. Our team will contact you to finalise availability, pricing and payment.
+      </div>
+
+      <div class="booking-layout">
+        <div class="form-panel">
+          <h2>Booking Request</h2>
+          <p>All fields marked <span class="required">*</span> are required.</p>
+
+          <form id="booking-form" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="full-name">Full Name <span class="required">*</span></label>
+                <input type="text" id="full-name" name="fullName" required autocomplete="name">
+                <span class="field-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="e.g. 080X XXX XXXX">
+                <span class="field-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+                <span class="field-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="room-type">Room Type <span class="required">*</span></label>
+                <select id="room-type" name="roomType" required>
+                  <option value="">Select a room type</option>
+                  <option value="standard">Standard Room</option>
+                  <option value="deluxe">Deluxe Room</option>
+                  <option value="suite">Executive Suite</option>
+                  <option value="family-suite">Family Suite</option>
+                  <option value="not-sure">Not sure yet</option>
+                </select>
+                <span class="field-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="check-in">Check-in Date <span class="required">*</span></label>
+                <input type="date" id="check-in" name="checkIn" required>
+                <span class="field-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="check-out">Check-out Date <span class="required">*</span></label>
+                <input type="date" id="check-out" name="checkOut" required>
+                <span class="field-error" role="alert"></span>
+                <span class="field-hint">Must be after your check-in date.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="guests">Number of Guests <span class="required">*</span></label>
+                <input type="number" id="guests" name="guests" min="1" max="20" required>
+                <span class="field-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="rooms-needed">Number of Rooms</label>
+                <input type="number" id="rooms-needed" name="roomsNeeded" min="1" max="10" value="1">
+                <span class="field-error" role="alert"></span>
+              </div>
+
+              <div class="form-group full">
+                <label for="special-requests">Special Requests</label>
+                <textarea id="special-requests" name="specialRequests" placeholder="Let us know about any special requirements for your stay"></textarea>
+                <span class="field-error" role="alert"></span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit Booking Request</button>
+            <p class="form-note">Submitting this form does not guarantee a room reservation. This is a request only, and no payment or booking system is currently connected.</p>
+          </form>
+
+          <div class="form-success" role="status">
+            <h3>Booking Request Received</h3>
+            <p>Thank you. Your booking request has passed validation. Please note: this form is not yet connected to a live booking or payment system, so your stay has not been confirmed. Our team will follow up with you directly once this is connected.</p>
+          </div>
+        </div>
+
+        <aside class="booking-aside">
+          <h3>Why Book Directly</h3>
+          <ul>
+            <li>Direct communication with our front desk team</li>
+            <li>Assistance choosing the right room for your needs</li>
+            <li>Personalised support before and during your stay</li>
+          </ul>
+          <p style="margin-top: 1.5rem; font-size: var(--fs-sm); color: rgba(247,244,236,0.75);">Have questions before booking? <a href="contact.html" style="color: var(--color-gold-soft); text-decoration: underline;">Contact us</a> directly.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <!-- Brand -->
+    <div class="footer-col footer-brand">
+     <!-- Replace the existing <a href="index.html" class="logo"> block in your footer with this -->
+<a href="index.html" class="logo" style="display: flex !important; align-items: center !important; gap: 12px !important; text-decoration: none !important;">
+  <img src="images/logo.png" alt="Bold Dream Hotel Logo" style="width: 40px !important; height: 40px !important; max-width: 40px !important; max-height: 40px !important; object-fit: contain !important; display: block !important;">
+  <span class="logo-text" style="display: flex !important; flex-direction: column !important;">
+    <strong style="font-family: 'Fraunces', serif !important; font-size: 1.05rem !important; color: #ffffff !important; line-height: 1.1 !important;">Bold Dream Hotel</strong>
+    <span style="font-size: 0.65rem !important; letter-spacing: 1px !important; color: #d0d0d0 !important; margin-top: 2px !important;">3 Imasayi Street &middot; Ota</span>
+  </span>
+</a>
+
+      <p>
+        Comfortable and memorable accommodation in Imasayi Street, Ota,
+        Ogun State, Nigeria.
+      </p>
+
+      <div class="social-links" aria-label="Social media links">
+
+        <a
+          href="https://www.instagram.com/bolddreamhotelsuite?igsi=MWJkbDNnbzVmbDc5Ng=="
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Bold Dream Hotel on Instagram"
+        >
+          I
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@bold.dream.hotel?_r=1&_t=ZS-996GeX48AXE"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Bold Dream Hotel on TikTok"
+        >
+          T
+        </a>
+
+        <a
+          href="https://wa.me/2347087417878"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat with Bold Dream Hotel on WhatsApp"
+        >
+          W
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- Explore -->
+    <div class="footer-col">
+      <h4>Explore</h4>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms &amp; Suites</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+
+
+    <!-- Guest Information -->
+    <div class="footer-col">
+      <h4>Guest Info</h4>
+
+      <ul>
+        <li><a href="booking.html">Book Now</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="rooms.html">Room Rates</a></li>
+        <li>
+          <a href="privacy.html" aria-current="page">
+            Privacy Policy
+          </a>
+        </li>
+        <li>
+          <a href="terms.html" aria-current="page">
+            Terms &amp; Conditions
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+
+      <ul>
+        <li>
+          <a href="tel:+2347087417878">
+            Phone: +234 708 741 7878
+          </a>
+        </li>
+
+        <li>
+          <a href="mailto:Bolddream08@gmail.com">
+            Email: Bolddream08@gmail.com
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://maps.app.goo.gl/adkkCmCDGXedQD1n6"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            3 Imasayi Street, Off Foursquare Street,
+            Ota, Ogun State
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://wa.me/2347087417878"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp: +234 708 741 7878
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+
+  <div class="container footer-bottom">
+    <span>
+      &copy; 2026 Bold Dream Hotel. All rights reserved.
+    </span>
+
+    <span class="footer-note">
+      Imasayi Street · Ota · Ogun State · Nigeria
+    </span>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">&uarr;</button>
+<script src="js/script.js"></script>
+</body>
+</html>
