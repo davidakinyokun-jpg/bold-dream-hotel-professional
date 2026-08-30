@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Page Not Found | Bold Dream Hotel</title>
+
+  <meta
+    name="description"
+    content="The page you're looking for could not be found. Return to Bold Dream Hotel."
+  >
+
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --forest: #1B3A2F;
+      --forest-dark: #0F241C;
+      --gold: #B8955C;
+      --gold-soft: #D8C39E;
+      --cream: #F7F4EC;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Karla", Arial, sans-serif;
+      background: var(--cream);
+      color: var(--forest-dark);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .error-header {
+      padding: 1.2rem 5%;
+      border-bottom: 1px solid rgba(27, 58, 47, 0.12);
+      background: rgba(247, 244, 236, 0.97);
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--forest-dark);
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.1rem;
+      position: relative;
+    }
+
+    .logo-mark::before,
+    .logo-mark::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border: 1px solid var(--gold);
+      transform: rotate(45deg);
+    }
+
+    .logo-mark::before {
+      top: -3px;
+      left: -3px;
+    }
+
+    .logo-mark::after {
+      bottom: -3px;
+      right: -3px;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text strong {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .logo-text span {
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    /* Main */
+    .error-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5rem 1.25rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .error-content::before {
+      content: "404";
+      position: absolute;
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(12rem, 35vw, 28rem);
+      font-weight: 700;
+      color: rgba(27, 58, 47, 0.035);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .error-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 650px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .eyebrow::before,
+    .eyebrow::after {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .error-code {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(6rem, 18vw, 10rem);
+      line-height: 0.9;
+      color: var(--forest);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      line-height: 1.1;
+      color: var(--forest-dark);
+      margin-bottom: 1rem;
+    }
+
+    .error-message {
+      max-width: 520px;
+      margin: 0 auto 2rem;
+      color: #55524A;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0.85rem 1.7rem;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-family: "Karla", Arial, sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: 180ms ease;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--forest-dark);
+      border-color: var(--gold);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-soft);
+      border-color: var(--gold-soft);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--forest-dark);
+      border-color: var(--forest-dark);
+    }
+
+    .btn-outline:hover {
+      background: var(--forest);
+      border-color: var(--forest);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    .error-footer {
+      padding: 1.25rem 5%;
+      border-top: 1px solid rgba(247, 244, 236, 0.12);
+      background: var(--forest-dark);
+      color: rgba(247, 244, 236, 0.65);
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    .error-footer span {
+      color: var(--gold-soft);
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .error-header {
+        padding: 1rem;
+      }
+
+      .logo-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .logo-text strong {
+        font-size: 1rem;
+      }
+
+      .logo-text span {
+        font-size: 0.52rem;
+      }
+
+      .error-content {
+        padding: 4rem 1rem;
+      }
+
+      .eyebrow {
+        font-size: 0.65rem;
+        letter-spacing: 0.16em;
+      }
+
+      .error-code {
+        font-size: 6rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .error-message {
+        font-size: 0.95rem;
+      }
+
+      .actions {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .btn {
+        transition: none;
+      }
+    }
+  </style>
+  <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-19259RCX1T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-19259RCX1T');
+</script>
+</head>
+
+<body>
+
+  <div class="error-page">
+
+    <!-- Header -->
+    <header class="error-header">
+        <div class="logo-container" style="display: flex !important; align-items: center !important; gap: 12px !important;">
+            <img src="images/logo.png" alt="Bold Dream Hotel Logo" class="header-logo" style="width: 45px !important; height: 45px !important; max-width: 45px !important; max-height: 45px !important; object-fit: contain !important; display: block !important;">
+            <div class="logo-text" style="display: flex !important; flex-direction: column !important; justify-content: center !important;">
+              <span class="brand-name" style="font-family: 'Fraunces', serif !important; font-size: 1.1rem !important; font-weight: 700 !important; line-height: 1.1 !important; color: #1a1a1a !important;">BOLD DREAM HOTEL</span>
+              <span class="brand-subtext" style="font-size: 0.62rem !important; letter-spacing: 1.5px !important; color: #666666 !important; margin-top: 3px !important; text-transform: uppercase !important;">3 IMASAYI STREET · OTA</span>
+            </div>
+          </div>
+    </header>
+
+
+    <!-- Main -->
+    <main class="error-content">
+
+      <div class="error-inner">
+
+        <div class="eyebrow">
+          Page Not Found
+        </div>
+
+        <div class="error-code" aria-hidden="true">
+          404
+        </div>
+
+        <h1>
+          This page has checked out.
+        </h1>
+
+        <p class="error-message">
+          The page you're looking for doesn't exist or may have been moved.
+          Don't worry — let's get you back to Bold Dream Hotel.
+        </p>
+
+        <div class="actions">
+
+          <a href="index.html" class="btn btn-primary">
+            Back to Home
+          </a>
+
+          <a href="booking.html" class="btn btn-outline">
+            Make a Booking
+          </a>
+
+        </div>
+
+      </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="error-footer">
+      © <span id="year"></span> Bold Dream Hotel. All rights reserved.
+    </footer>
+
+  </div>
+
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
