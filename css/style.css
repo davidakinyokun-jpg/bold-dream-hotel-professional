@@ -447,7 +447,7 @@ select:focus-visible {
 /* -------------------- Hero -------------------- */
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 100vh;
   display: flex;
   align-items: flex-end;
   color: var(--color-white);
@@ -459,18 +459,39 @@ select:focus-visible {
   inset: 0;
   z-index: 0;
 }
-
+.hero-media2 {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-media2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* <--- ADD THIS LINE */
+}
 .hero-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top; /* <--- ADD THIS LINE */
 }
 
 .hero-media::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(15, 30, 24, 0.35) 0%, rgba(15, 30, 24, 0.55) 55%, rgba(15, 30, 24, 0.88) 100%);
+  /* Darkened the bottom stop slightly for better text contrast */
+  background: linear-gradient(180deg, rgba(15, 20, 25, 0.3) 0%, rgba(15, 20, 25, 0.7) 100%); 
+  pointer-events: none; /* Ensures clicks pass through to links/buttons */
+}
+.hero-media2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Darkened the bottom stop slightly for better text contrast */
+  background: linear-gradient(180deg, rgba(15, 20, 25, 0.3) 0%, rgba(15, 20, 25, 0.7) 100%); 
+  pointer-events: none; /* Ensures clicks pass through to links/buttons */
 }
 
 .hero-content {
@@ -501,14 +522,15 @@ select:focus-visible {
 
 .hero h1 {
   color: var(--color-white);
-  font-size: clamp(2.4rem, 5.4vw, var(--fs-3xl));
-  margin-bottom: var(--space-sm);
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
 }
 
 .hero p {
   font-size: var(--fs-md);
   color: rgba(247, 244, 236, 0.88);
-  max-width: 560px;
+  max-width: 550px;
   margin-bottom: var(--space-md);
 }
 
@@ -536,15 +558,30 @@ select:focus-visible {
   align-items: center;
   color: var(--color-white);
   overflow: hidden;
-}
-
-.page-hero .hero-media img { width: 100%; height: 100%; object-fit: cover; }
+}.page-hero .hero-media img { width: 100%; height: 100%; object-fit: cover; }
 
 .page-hero .hero-content {
   padding-block: var(--space-xl);
   max-width: 680px;
 }
+.hero-title{
+  color: white;
+}
+/* Keeps desktop styling intact while fixing mobile overflow */
+@media (max-width: 768px) {
+  .map-crop{
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden; /* Clips anything extending past screen edges */
+    border-radius: 8px; /* Keeps rounded edges intact */
+  }
 
+  .map-crop iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block;
+  }
+}
 .breadcrumb {
   font-size: var(--fs-xs);
   letter-spacing: 0.05em;
@@ -686,10 +723,20 @@ select:focus-visible {
   overflow: hidden;
 }
 
+.room-theme {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #c5a059; /* Gold accent */
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
 .room-card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform var(--transition-med);
 }
 
@@ -698,6 +745,7 @@ select:focus-visible {
 }
 
 .room-price-tag {
+  font-family: 'plus jakarta sans' , sans-serif;
   position: absolute;
   bottom: 0;
   left: 0;

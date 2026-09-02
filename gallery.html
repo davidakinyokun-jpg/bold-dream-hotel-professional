@@ -20,6 +20,7 @@
 >
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="icon" type="imagees/png" href="images/favicon.png.jpeg">
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-19259RCX1T"></script>
@@ -45,13 +46,14 @@
   <div class="container header-inner">
 
     <!-- FIXED LOGO SECTION -->
-    <div class="logo-container" style="display: flex !important; align-items: center !important; gap: 12px !important;">
-      <img src="images/logo.png" alt="Bold Dream Hotel Logo" class="header-logo" style="width: 45px !important; height: 45px !important; max-width: 45px !important; max-height: 45px !important; object-fit: contain !important; display: block !important;">
+    <div class="logo-container" style="display: flex !important; align-items: center !important; gap: 0.75rem !important; text-decoration: none;">
+      <img src="images/logo.png" alt="Bold Dream Hotel Logo" class="header-logo" style="width: auto !important; height: 48px !important; max-width: 45px !important; max-height: 45px !important; object-fit: contain !important; display: block !important;">
       <div class="logo-text" style="display: flex !important; flex-direction: column !important; justify-content: center !important;">
-        <span class="brand-name" style="font-family: 'Fraunces', serif !important; font-size: 1.1rem !important; font-weight: 700 !important; line-height: 1.1 !important; color: #1a1a1a !important;">BOLD DREAM HOTEL</span>
-        <span class="brand-subtext" style="font-size: 0.62rem !important; letter-spacing: 1.5px !important; color: #666666 !important; margin-top: 3px !important; text-transform: uppercase !important;">3 IMASAYI STREET · OTA</span>
+        <span class="brand-name" style="font-family: 'Fraunces', serif !important; font-size: 1.5rem !important; font-weight: 600 !important; letter-spacing: 2px; color: #111;">BOLD DREAM HOTEL</span>
       </div>
     </div>
+
+
 
     <button class="nav-toggle"
       aria-label="Open menu"
@@ -96,7 +98,7 @@
     <div class="hero-media">
 
       <img
-        src="images/gallery-interior-2.jpg"
+        src="images/girl3.png"
         alt="Interior of Bold Dream Hotel"
       >
 
@@ -115,13 +117,8 @@
 
       </span>
 
-
-      <h1>
-        Gallery
-      </h1>
-
-
-      <p>
+      <h1 class="hero-title">Gallery
+      </h1> <p>
         A closer look at Bold Dream Hotel —
         exterior, rooms, interior spaces and amenities
         in Ota, Ogun State.
@@ -137,22 +134,7 @@
 
   <section class="section">
 
-    <div class="container">
-
-
-      <!-- Placeholder notice -->
-
-      <div class="notice-banner">
-
-        <strong>Gallery:</strong>
-
-        Photos of Bold Dream Hotel will be added
-        once the hotel's official photography is provided.
-
-      </div>
-
-
-      <!-- Gallery Filters -->
+    <div class="container">     <!-- Gallery Filters -->
 
       <div
         class="gallery-filter"
@@ -227,7 +209,45 @@
         >
 
           <img
-            src="images/gallery-exterior-1.jpg"
+            src="images/about6.jpg"
+            alt="Bold Dream Hotel exterior view"
+          >
+
+          <span class="gallery-item-overlay">
+            <span>
+              Hotel Exterior
+            </span>
+          </span>
+
+        </button>
+        <button
+          type="button"
+          class="gallery-item"
+          data-category="exterior"
+          data-caption="Hotel Exterior"
+        >
+
+          <img
+            src="images/EXT2.png"
+            alt="Bold Dream Hotel exterior view"
+          >
+
+          <span class="gallery-item-overlay">
+            <span>
+              Hotel Exterior
+            </span>
+          </span>
+
+        </button>
+        <button
+          type="button"
+          class="gallery-item"
+          data-category="exterior"
+          data-caption="Hotel Exterior"
+        >
+
+          <img
+            src="images/MAIN1.png"
             alt="Bold Dream Hotel exterior view"
           >
 
@@ -251,7 +271,7 @@
         >
 
           <img
-            src="images/gallery-exterior-2.jpg"
+            src="images/bar4.png"
             alt="Bold Dream Hotel facade"
           >
 
@@ -275,7 +295,7 @@
         >
 
           <img
-            src="images/gallery-room-1.jpg"
+            src="images/usa1.png"
             alt="Guest room at Bold Dream Hotel"
           >
 
@@ -299,7 +319,7 @@
         >
 
           <img
-            src="images/gallery-room-2.jpg"
+            src="images//italy1.png"
             alt="Another guest room view at Bold Dream Hotel"
           >
 
@@ -323,7 +343,7 @@
         >
 
           <img
-            src="images/gallery-room-3.jpg"
+            src="images/switz1.png"
             alt="Suite interior at Bold Dream Hotel"
           >
 
@@ -347,7 +367,7 @@
         >
 
           <img
-            src="images/gallery-interior-1.jpg"
+            src="images/ENJOY1.png"
             alt="Lobby interior at Bold Dream Hotel"
           >
 
@@ -371,7 +391,7 @@
         >
 
           <img
-            src="images/gallery-interior-2.jpg"
+            src="images/rec.png"
             alt="Reception area at Bold Dream Hotel"
           >
 
@@ -395,7 +415,7 @@
         >
 
           <img
-            src="images/gallery-amenity-1.jpg"
+            src="images/pool.png"
             alt="Amenities at Bold Dream Hotel"
           >
 
@@ -405,11 +425,27 @@
             </span>
           </span>
 
-        </button>
+        </button>    <button
+        type="button"
+        class="gallery-item"
+        data-category="amenities"
+        data-caption="Hotel Amenities"
+      >
 
+        <img
+          src="images/POOL2.png"
+          alt="Amenities at Bold Dream Hotel"
+        >
 
+        <span class="gallery-item-overlay">
+          <span>
+            Amenities
+          </span>
+        </span>
 
-        <!-- Amenity 2 -->
+      </button>
+
+ <!-- Amenity 2 -->
 
         <button
           type="button"
@@ -419,7 +455,7 @@
         >
 
           <img
-            src="images/gallery-amenity-2.jpg"
+            src="images/din.png"
             alt="Dining area at Bold Dream Hotel"
           >
 
@@ -443,7 +479,7 @@
         >
 
           <img
-            src="images/gallery-common-1.jpg"
+            src="images/swim.png"
             alt="Common area at Bold Dream Hotel"
           >
 
@@ -455,8 +491,82 @@
 
         </button>
 
+        <button
+        type="button"
+        class="gallery-item"
+        data-category="common"
+        data-caption="Hotel Amenities"
+      >
 
+        <img
+          src="images/pool.png"
+          alt="Amenities at Bold Dream Hotel"
+        >
 
+        <span class="gallery-item-overlay">
+          <span>
+            Swimming pool
+          </span>
+        </span>
+
+      </button>
+      <button
+      type="button"
+      class="gallery-item"
+      data-category="amenities"
+      data-caption="Hotel Amenities"
+    >
+
+      <img
+        src="images/swim.png"
+        alt="Amenities at Bold Dream Hotel"
+      >
+
+      <span class="gallery-item-overlay">
+        <span>
+          Amenities
+        </span>
+      </span>
+
+    </button>
+    <button
+          type="button"
+          class="gallery-item"
+          data-category="interior"
+          data-caption="Hotel Interior"
+        >
+
+          <img
+            src="images/int1.png"
+            alt="Amenities at Bold Dream Hotel"
+          >
+
+          <span class="gallery-item-overlay">
+            <span>
+              Amenities
+            </span>
+          </span>
+
+        </button>
+    <button
+          type="button"
+          class="gallery-item"
+          data-category="amenities"
+          data-caption="Hotel Amenities"
+        >
+
+          <img
+            src="images/bar2.png"
+            alt="Amenities at Bold Dream Hotel"
+          >
+
+          <span class="gallery-item-overlay">
+            <span>
+              Bar
+            </span>
+          </span>
+
+        </button>
         <!-- Common Area 2 -->
 
         <button
@@ -467,7 +577,7 @@
         >
 
           <img
-            src="images/gallery-common-2.jpg"
+            src="images/vip.png"
             alt="Lounge at Bold Dream Hotel"
           >
 
@@ -478,6 +588,7 @@
           </span>
 
         </button>
+        
 
 
 
@@ -491,7 +602,7 @@
         >
 
           <img
-            src="images/gallery-exterior-3.jpg"
+            src="images/park.png"
             alt="Grounds of Bold Dream Hotel"
           >
 
@@ -587,30 +698,20 @@
       <div
         class="social-links"
         aria-label="Social media links"
-      >
-
-        <!-- Instagram -->
-
-        <a
-          href="https://www.instagram.com/bolddreamhotelsuite?igsi=MWJkbDNnbzVmbDc5Ng=="
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-        >
-          I
-        </a>
+      ><a
+href="https://www.instagram.com/bolddreamhotelsuite?igsi=MWJkbDNnbzVmbDc5Ng=="
+target="_blank" aria-label="Instagram" class="social-icon">
+<i class="fa-brands fa-instagram"></i> 
+</a>
 
 
-        <!-- TikTok -->
+<!-- TikTok -->
 
-        <a
-          href="https://www.tiktok.com/@bold.dream.hotel?_r=1&_t=ZS-996GeX48AXE"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="TikTok"
-        >
-          T
-        </a>
+<a
+href="https://www.tiktok.com/@bold.dream.hotel?_r=1&_t=ZS-996GeX48AXE"
+target="_blank" aria-label="TikTok" class="social-icon">
+<i class="fa-brands fa-tiktok"></i>
+</a>
 
       </div>
 
